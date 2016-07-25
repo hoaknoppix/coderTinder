@@ -13,6 +13,8 @@ class DraggableImageView : UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     
+    var imageCenter: CGPoint!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initSubviews()
@@ -29,6 +31,7 @@ class DraggableImageView : UIView {
         nib.instantiateWithOwner(self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
+        imageCenter = profileImage.center
             
             // custom initialization logic
     }
@@ -40,11 +43,29 @@ class DraggableImageView : UIView {
     }
     
     func onMovingImage(gesture: UIPanGestureRecognizer) {
-        let point = gesture.locationInView(self)
-        
-        if gesture.state == UIGestureRecognizerState.Changed {
-            profileImage.center = point
+        let translation = gesture.translationInView(profileImage)
+
+        switch gesture.state {
+        case .Began:
+            break
+        case .Changed:
+            profileImage.center.x = imageCenter.x + translation.x
+            let angle = translation.x / 150
+
+            if (translation.x > 50) {
+                print(translation)
+                profileImage.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4) * angle)
+            } else if (translation.x < -50) {
+                profileImage.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4) * angle)
+
+            }
+        case .Ended:
+            profileImage.transform = CGAffineTransformMakeRotation(0)
+            break
+        default:
+            break
         }
+        
     }
     
 }
