@@ -10,6 +10,18 @@ import UIKit
 
 class CardsViewController: UIViewController {
 
+    @IBOutlet weak var ryanImage: UIImageView!
+    
+    @IBAction func onSpanRyan(gesture: UIPanGestureRecognizer) {
+        print ("spanning")
+        
+        let point = gesture.locationInView(view)
+        
+        if gesture.state == UIGestureRecognizerState.Changed {
+            ryanImage.center = point
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
