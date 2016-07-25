@@ -12,6 +12,8 @@
 		FFD574B61D4639C40022BA71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD574B41D4639C40022BA71 /* Main.storyboard */; };
 		FFD574B81D4639C40022BA71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD574B71D4639C40022BA71 /* Assets.xcassets */; };
 		FFD574BB1D4639C40022BA71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD574B91D4639C40022BA71 /* LaunchScreen.storyboard */; };
+		FFD574C31D4641A40022BA71 /* DraggableImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD574C21D4641A40022BA71 /* DraggableImageView.xib */; };
+		FFD574C51D4641C10022BA71 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD574C41D4641C10022BA71 /* DraggableImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FFD574B71D4639C40022BA71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFD574BA1D4639C40022BA71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD574BC1D4639C40022BA71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFD574C21D4641A40022BA71 /* DraggableImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableImageView.xib; sourceTree = "<group>"; };
+		FFD574C41D4641C10022BA71 /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				FFD574B01D4639C40022BA71 /* AppDelegate.swift */,
 				FFD574B21D4639C40022BA71 /* CardsViewController.swift */,
+				FFD574C21D4641A40022BA71 /* DraggableImageView.xib */,
+				FFD574C41D4641C10022BA71 /* DraggableImageView.swift */,
 				FFD574B41D4639C40022BA71 /* Main.storyboard */,
 				FFD574B71D4639C40022BA71 /* Assets.xcassets */,
 				FFD574B91D4639C40022BA71 /* LaunchScreen.storyboard */,
@@ -124,6 +130,7 @@
 			files = (
 				FFD574BB1D4639C40022BA71 /* LaunchScreen.storyboard in Resources */,
 				FFD574B81D4639C40022BA71 /* Assets.xcassets in Resources */,
+				FFD574C31D4641A40022BA71 /* DraggableImageView.xib in Resources */,
 				FFD574B61D4639C40022BA71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFD574B31D4639C40022BA71 /* CardsViewController.swift in Sources */,
+				FFD574C51D4641C10022BA71 /* DraggableImageView.swift in Sources */,
 				FFD574B11D4639C40022BA71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
